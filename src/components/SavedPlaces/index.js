@@ -43,12 +43,10 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
   },
   cardContainer: {
-    backgroundColor: "lightgrey",
     height: Dimensions.get("screen").width * 0.27,
     width: Dimensions.get("screen").width * 0.27,
     marginTop: 10,
     borderRadius: 5,
-    padding: 10,
   },
   cityNameContainer: {
     justifyContent: "center",

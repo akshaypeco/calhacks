@@ -1,9 +1,18 @@
-import { Dimensions, StyleSheet, Text, View } from "react-native";
+import {
+  Dimensions,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React from "react";
 import MapView from "react-native-maps";
 import DetailedPlanCard from "../../components/DetailedPlanCard";
+import Navigation from "../../navigation";
+import { useNavigation } from "@react-navigation/native";
 
 const DetailedPlan = () => {
+  const navigation = useNavigation();
   return (
     <View style={{ backgroundColor: "white", flex: 1 }}>
       <View style={styles.mapContainer}>
@@ -29,9 +38,62 @@ const DetailedPlan = () => {
       </View>
       <View>
         <DetailedPlanCard duration={3} num={1} loc={"Golden Gate Park"} />
+        <View
+          style={{
+            backgroundColor: "black",
+            marginLeft: 40,
+            width: 10,
+            height: 10,
+            borderRadius: 10,
+            marginVertical: 6,
+          }}
+        ></View>
+        <View
+          style={{
+            backgroundColor: "black",
+            marginLeft: 40,
+            width: 10,
+            height: 10,
+            borderRadius: 10,
+            marginVertical: 6,
+          }}
+        ></View>
         <DetailedPlanCard duration={1} num={2} loc={"Lands End"} />
+        <View
+          style={{
+            backgroundColor: "black",
+            marginLeft: 40,
+            width: 10,
+            height: 10,
+            borderRadius: 10,
+            marginVertical: 6,
+          }}
+        ></View>
+        <View
+          style={{
+            backgroundColor: "black",
+            marginLeft: 40,
+            width: 10,
+            height: 10,
+            borderRadius: 10,
+            marginVertical: 6,
+          }}
+        ></View>
         <DetailedPlanCard duration={2} num={3} loc={"Presidio"} />
       </View>
+      <TouchableOpacity
+        style={{
+          alignSelf: "center",
+          backgroundColor: "black",
+          borderRadius: 5,
+          padding: 7,
+        }}
+        onPress={() => {
+          navigation.goBack();
+        }}
+      >
+        <Text style={{ color: "white", fontSize: 15 }}>Go Back</Text>
+      </TouchableOpacity>
     </View>
   );
 };

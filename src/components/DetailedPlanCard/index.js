@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
     margin: 20,
     borderRadius: 5,
     padding: 10,
+    paddingVertical: 20,
   },
   time: {
     fontSize: 19,

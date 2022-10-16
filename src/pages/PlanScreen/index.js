@@ -63,8 +63,14 @@ const PlanScreen = () => {
               <AntDesign name="plus" size={24} color="black" />
             </View>
           </TouchableOpacity>
-          <SavedPlaces text={"Weekend with Liz and John"} />
-          <SavedPlaces text={"Family trips"} />
+          <SavedPlaces
+            text={"Food"}
+            imgLink={require("../../assets/images/Rectangle_17.png")}
+          />
+          <SavedPlaces
+            text={"Christmas 2020"}
+            imgLink={require("../../assets/images/Rectangle_18.png")}
+          />
         </View>
       </View>
     </SafeAreaView>
