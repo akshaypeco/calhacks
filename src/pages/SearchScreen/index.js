@@ -45,6 +45,12 @@ const SearchScreen = () => {
             paddingAdjustmentBehavior="automatic"
             showsUserLocation={true}
             style={styles.map}
+            region={{
+              latitude: 37.77439,
+              longitude: -122.4862,
+              latitudeDelta: 0.15,
+              longitudeDelta: 0.15,
+            }}
           />
         </View>
         <View>
@@ -59,10 +65,34 @@ const SearchScreen = () => {
           >
             4 possible itineraries
           </Text>
-          <PlanCard />
-          <PlanCard />
-          <PlanCard />
-          <PlanCard />
+          <PlanCard
+            opacity={1}
+            total_duration={6}
+            upvotes={50}
+            username={"oski"}
+            firstLoc={"Golden Gate Park"}
+          />
+          <PlanCard
+            opacity={0.8}
+            total_duration={6}
+            upvotes={50}
+            username={"oski"}
+            firstLoc={"De Young Museum"}
+          />
+          <PlanCard
+            opacity={0.7}
+            total_duration={6}
+            upvotes={50}
+            username={"oski"}
+            firstLoc={"Asian Art Museum"}
+          />
+          <PlanCard
+            opacity={0.6}
+            total_duration={6}
+            upvotes={50}
+            username={"oski"}
+            firstLoc={"Lands End"}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>

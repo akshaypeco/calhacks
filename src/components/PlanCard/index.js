@@ -11,7 +11,7 @@ import { Feather } from "@expo/vector-icons";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 
-const PlanCard = ({ opacity }) => {
+const PlanCard = ({ opacity, total_duration, upvotes, username, firstLoc }) => {
   const navigation = useNavigation();
 
   return (
@@ -29,9 +29,9 @@ const PlanCard = ({ opacity }) => {
         }}
       >
         <View>
-          <Text style={styles.time}>6 hours</Text>
+          <Text style={styles.time}>{total_duration}</Text>
           <Text style={styles.overview} numberOfLines={2}>
-            Begins at Presidio
+            Begins at {firstLoc}
           </Text>
         </View>
         <View
@@ -47,7 +47,7 @@ const PlanCard = ({ opacity }) => {
             color="white"
             style={{ marginRight: 10 }}
           />
-          <Text style={styles.upvotes}>45</Text>
+          <Text style={styles.upvotes}>{upvotes}</Text>
         </View>
       </View>
     </TouchableOpacity>

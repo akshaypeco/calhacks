@@ -1,7 +1,7 @@
 import { Dimensions, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import MapView from "react-native-maps";
-import PlanCard from "../../components/PlanCard";
+import DetailedPlanCard from "../../components/DetailedPlanCard";
 
 const DetailedPlan = () => {
   return (
@@ -11,18 +11,26 @@ const DetailedPlan = () => {
           paddingAdjustmentBehavior="automatic"
           showsUserLocation={true}
           style={styles.map}
+          region={{
+            latitude: 37.77439,
+            longitude: -122.4862,
+            latitudeDelta: 0.15,
+            longitudeDelta: 0.15,
+          }}
         />
       </View>
       <View>
         <Text style={{ marginLeft: 20, marginTop: 20, fontSize: 18 }}>
-          <Text style={{ fontWeight: "bold" }}>5 hour</Text> itinerary
+          <Text style={{ fontWeight: "bold" }}>6 hour</Text> itinerary
         </Text>
         <Text style={{ marginLeft: 20, marginTop: 5, fontSize: 16.5 }}>
           San Francisco
         </Text>
       </View>
-      <View style={styles.itineraryStepContainer}>
-        <PlanCard />
+      <View>
+        <DetailedPlanCard duration={3} num={1} loc={"Golden Gate Park"} />
+        <DetailedPlanCard duration={1} num={2} loc={"Lands End"} />
+        <DetailedPlanCard duration={2} num={3} loc={"Presidio"} />
       </View>
     </View>
   );
